@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+	<IsPackable>false</IsPackable>
+	<ProjectGuid>{9a0d1730-2418-4df5-aeaf-261d8fe981c5}</ProjectGuid>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="TestResources\Results\test1.ts" />
+    <None Remove="TestResources\Results\test2.ts" />
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <EmbeddedResource Include="TestResources\Results\test2.ts">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestResources\Results\test1.ts">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.msbuild" Version="2.8.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.1.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.1.0" />
+  </ItemGroup>
+  
+
+  <ItemGroup>
+    <ProjectReference Include="..\DtoTranslator\DtoTranslator.csproj" />
+  </ItemGroup>
+
+</Project>
