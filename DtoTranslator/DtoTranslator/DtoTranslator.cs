@@ -50,7 +50,6 @@ namespace DtoTranslator
                     {
                         var newClass = new ClassModel(dto.Name);
 
-                        newClass.IsAbstract = dto.IsAbstract;
                         if (dto.BaseType.ReflectionName != "Object")
                         {
                             newClass.ParentClass = dto.BaseType.ReflectionName;
@@ -128,7 +127,7 @@ namespace DtoTranslator
                     {
                         parentClassString = " extends " + classModel.ParentClass;
                     }
-                    returnStringBuilder.Append("export " + (classModel.IsAbstract ? "abstract " : "") + "class " + objModel.Name + parentClassString + " {" + newLine);
+                    returnStringBuilder.Append("export interface " + objModel.Name + parentClassString + " {" + newLine);
                     classModel.Props.ForEach(x =>
                     {
                         returnStringBuilder.Append(x.GetString(newLine));

@@ -2,10 +2,13 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
 	<ProjectGuid>{bc239e12-53d7-48cd-bda9-750a747ab41d}</ProjectGuid>
 	<ApplicationIcon />
 	<StartupObject>DtoTranslator.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="dnlib" Version="3.3.1" />

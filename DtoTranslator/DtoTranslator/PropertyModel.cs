@@ -13,7 +13,7 @@ namespace DtoTranslator
         public string GetString(string newLine)
         {
             var nullableOrNot = IsNullable ? "?" : "";
-            return "  public " + NamingConvention.ConvertName(Name) + nullableOrNot + ": " + NamingConvention.ConvertType(Type) + ";" + newLine;
+            return "  " + NamingConvention.ConvertName(Name) + nullableOrNot + ": " + NamingConvention.ConvertType(Type) + ";" + newLine;
         }
     }
 }

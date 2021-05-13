@@ -14,7 +14,6 @@ namespace DtoTranslator
 
         public List<PropertyModel> Props { get; set; }
 
-        public bool IsAbstract { get; set; }
         public string ParentClass { get; set; }
     }
 }
